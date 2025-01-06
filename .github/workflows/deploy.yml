@@ -1,7 +1,7 @@
 name: 发布脚本
 
 on:
-  #监听 tag 操作
+  #监听 tags 操作
   push:
     tags:
       - 'v*'
@@ -12,11 +12,18 @@ jobs:
     runs-on: ubuntu-22.04
     # 步骤
     steps:
-      - name: 1.发布到 npm
+      - name: 1.拉取代码
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: 2.安装 Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.14.0
-          registry-url: https://registry.npmjs.org/
+          node-version: '20.13.0'
+        
+      - name: 3.发布到 npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public
+        run: |
+          npm publish --access public
