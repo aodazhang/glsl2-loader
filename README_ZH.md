@@ -1,12 +1,12 @@
 # glsl2-loader
 
-Simple and faster glsl loader, support webpack4 / webpack5.
+更加简单快捷的 glsl loader，支持 webpack4 / webpack5。
 
-[中文](./README_ZH.md)
+[English](./README.md)
 
-## Quick Start
+## 快速开始
 
-1.Installation this package
+1.安装
 
 ```shell
 npm install glsl2-loader -D
@@ -14,7 +14,7 @@ npm install glsl2-loader -D
 pnpm i glsl2-loader -D
 ```
 
-2.Configure `webpack.config.js`
+2.配置 `webpack.config.js`
 
 ```javascript
 module: {
@@ -28,7 +28,7 @@ module: {
 }
 ```
 
-3.You can introduce the glsl file like this:
+3.你可以在 glsl 中引入其他 glsl 文件：
 
 ```glsl
 #include "/node_modules/lygia/math/saturate.glsl"
@@ -42,6 +42,6 @@ void main() {
 }
 ```
 
-## License
+## 开源协议
 
 [MIT](http://www.opensource.org/licenses/mit-license.php)
