@@ -12,7 +12,7 @@ npm install glsl2-loader -D
 pnpm i glsl2-loader -D
 ```
 
-2.Configure webpack:
+2.Configure webpack.config.js:
 
 ```javascript
 module: {
@@ -29,9 +29,7 @@ module: {
 3.You can introduce the glsl file like this:
 
 ```glsl
-// introducing third-party glsl
 #include "/node_modules/lygia/math/saturate.glsl"
-// introducing common glsl
 #include "../common/aces.glsl"
 
 void main() {
@@ -44,4 +42,4 @@ void main() {
 
 ## License
 
-MIT (http://www.opensource.org/licenses/mit-license.php)
+[MIT](http://www.opensource.org/licenses/mit-license.php)
