@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/aodazhang/glsl2-loader.git"
   },
-  "description": "Simple and fast glsl loader for webpack",
+  "description": "Simple and faster glsl loader for webpack5",
   "keywords": [
     "glsl",
     "glsl-loader",
