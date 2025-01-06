@@ -29,8 +29,7 @@
     "pnpm": ">=9"
   },
   "scripts": {
-    "lint": "prettier --write ./",
-    "preinstall": "npx only-allow pnpm"
+    "lint": "prettier --write ./"
   },
   "devDependencies": {
     "prettier": "^3.4.2"
