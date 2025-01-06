@@ -4,7 +4,7 @@ on:
   #监听 tags 操作
   push:
     tags:
-      - 'v*'
+      - 'v*' # 推送 v 开头的 tag 触发该脚本
 
 jobs:
   build-and-deploy:
@@ -24,8 +24,7 @@ jobs:
 
       - name: 3.发布到 npm
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # npm access tokens
         run: |
           npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          npm i
-          npm publish
+          npm publish --access public
