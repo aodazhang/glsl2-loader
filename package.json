@@ -1,0 +1,38 @@
+{
+  "name": "glsl2-loader",
+  "private": false,
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "aodazhang <aodazhang@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aodazhang/glsl2-loader.git"
+  },
+  "description": "Simple and fast glsl loader for webpack",
+  "keywords": [
+    "glsl",
+    "glsl-loader",
+    "webpack",
+    "webgl",
+    "shader"
+  ],
+  "homepage": "https://github.com/aodazhang/glsl2-loader",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "lint": "prettier --write ./",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}
